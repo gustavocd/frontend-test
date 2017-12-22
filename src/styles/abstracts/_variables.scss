@@ -1,0 +1,34 @@
+// Typography
+$font-family: Helvetica, sans-serif;
+$font-regular: normal;
+$font-bold: bold;
+$font-size: (
+    filter: 10px,
+    text: 12px,
+    subject: 16px,
+    sender: 16px,
+    actions: 19px,
+    body: 14px,
+    date: 12px
+);
+
+// Color palette
+$colors: (
+    sender: #333333,
+    subject: #333333,
+    shortDescription: #9B9B9B,
+    selectedBar: #4990E2,
+    selectedBg: #F9F9F9,
+    text: #333333,
+    mailBg: #F6F6F7,
+    mailActions: #8B8B8B,
+    border: #B5B5B5
+);
+
+// Breakpoints
+$breakpoints: (
+    phone: 468px,
+    tablet: 768px,
+    laptop: 992px,
+    desktop: 1200px
+);
