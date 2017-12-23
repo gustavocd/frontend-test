@@ -27,8 +27,10 @@ $colors: (
 
 // Breakpoints
 $breakpoints: (
-    phone: 468px,
-    tablet: 768px,
-    laptop: 992px,
-    desktop: 1200px
+    xsmall: (min-width: 20em),    // 320px / 16px
+    small: (min-width: 30em),     // 480px / 16px
+    xmedium: (min-width: 37.5em), // 600px / 16px
+    medium: (min-width: 48em),    // 768px / 16px
+    large: (min-width: 64em),     // 1024px / 16px
+    huge: (min-width: 75em)       // 1200px / 16px
 );

@@ -5,7 +5,3 @@
 @function fontSize($font-size, $size) {
     @return map-get($font-size, $size);
 }
-
-@function breakpoint($breakpoints, $breakpoint) {
-    @return map-get($breakpoints, $breakpoint);
-}
