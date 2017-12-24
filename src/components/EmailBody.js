@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import EmailHeader from './EmailHeader';
 
 class EmailBody extends Component {
     render() {
+        const { email } = this.props;
+        if (email) {
+            return (
+                <main>
+                    <EmailHeader subject={email.subject}/>
+                    <div className="email-body">
+                        <h2 className="email-body__title">
+                            {email.tag}
+                            <a href={`mailto:${email.from}`} className="email-body__mail">
+                                &nbsp;&lt;{email.from}&gt;
+                            </a>
+                        </h2>
+                        <p>{email.body}</p>                           
+                    </div>
+                </main>
+            )
+        }
         return (
-            <div className="email-body">
-                <h2 className="email-body__title">Amazon.com <a href="mailto" className="email-body__mail">&lt;noreply@amazom.com&gt;</a></h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa suscipit aspernatur debitis incidunt eum fuga voluptatem error ipsum, quasi neque dolore iure iste deserunt, quibusdam sunt fugit ab perspiciatis.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa suscipit aspernatur debitis incidunt eum fuga voluptatem error ipsum, quasi neque dolore iure iste deserunt, quibusdam sunt fugit ab perspiciatis.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa suscipit aspernatur debitis incidunt eum fuga voluptatem error ipsum, quasi neque dolore iure iste deserunt, quibusdam sunt fugit ab perspiciatis.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa suscipit aspernatur debitis incidunt eum fuga voluptatem error ipsum, quasi neque dolore iure iste deserunt, quibusdam sunt fugit ab perspiciatis.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa suscipit aspernatur debitis incidunt eum fuga voluptatem error ipsum, quasi neque dolore iure iste deserunt, quibusdam sunt fugit ab perspiciatis.
-                </p>
-            </div>
+            <svg className="email-container__envelop">
+                <use xlinkHref="img/sprite.svg#icon-mail"></use>
+            </svg>
         )
     }
 }
 
-export default EmailBody;
+const mapStateToProps = state => ({
+    email: state.emails[state.currentIndex]
+});
+
+export default connect(mapStateToProps)(EmailBody);

@@ -5,7 +5,7 @@ class EmailActions extends Component {
         return (
             <ul className="email-actions">
                 <li className="email-actions__item">
-                    <a className="email-actions__link">
+                    <a className="email-actions__link" onClick={this.props.click}>
                         <svg className="email-actions__icon">
                             <use xlinkHref="img/sprite.svg#icon-drawer"></use>
                         </svg>
@@ -13,7 +13,7 @@ class EmailActions extends Component {
                     </a>
                 </li>
                 <li className="email-actions__item">
-                    <a className="email-actions__link">
+                    <a className="email-actions__link" onClick={this.props.click}>
                         <svg className="email-actions__icon">
                             <use xlinkHref="img/sprite.svg#icon-trash"></use>
                         </svg>
@@ -21,7 +21,7 @@ class EmailActions extends Component {
                     </a>
                 </li>
                 <li className="email-actions__item">
-                    <a className="email-actions__link">
+                    <a className="email-actions__link" onClick={this.props.click}>
                         <svg className="email-actions__icon">
                             <use xlinkHref="img/sprite.svg#icon-spam"></use>
                         </svg>
