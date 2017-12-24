@@ -1,0 +1,49 @@
+.email-actions {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    background-color: #fff;
+    border-right: 1px solid color($colors, border);
+    border-bottom: 1px solid color($colors, border);
+    font-size: fontSize($font-size, text);
+
+    &__item:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: baseline;
+        cursor: pointer;
+
+        &:hover .email-actions__icon {
+            fill: color($colors, selectedBar);
+        }
+
+        &:hover .email-actions__text {
+            color: color($colors, selectedBar);
+        }
+
+        &.active {
+            .email-actions__icon {
+                fill: color($colors, selectedBar);
+            }
+
+            .email-actions__text {
+                color: color($colors, selectedBar);
+            }
+        }
+    }
+
+    &__text {
+        color: color($colors, sender);
+    }
+
+    &__icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 2px;
+    }
+}

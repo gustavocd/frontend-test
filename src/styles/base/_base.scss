@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}

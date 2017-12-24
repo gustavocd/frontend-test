@@ -1,0 +1,81 @@
+.email-item {
+    width: 320px;
+    height: 80px;
+    max-width: 320px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    background-color: #fff;
+    border-right: 1px solid color($colors, border);
+    border-bottom: 1px solid color($colors, border);
+    font-size: fontSize($font-size, text);
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: color($colors, selectedBg);
+    }
+
+    &.active {
+        background-color: color($colors, selectedBg);
+        border-left: 3px solid color($colors, selectedBar);
+    }
+
+    &__header {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__avatar {
+        width: 19px;
+        height: 19px;
+    }
+
+    &__subject {
+        font-weight: $font-regular;
+    }
+
+    &__sender {
+        font-weight: $font-bold;
+        padding-left: 5px;
+    }
+
+    &__subject,
+    &__sender {
+        color: color($colors, sender);
+        font-size: inherit;
+    }
+
+    &__sender,
+    &__body,
+    &__subject {
+        margin: 0;
+    }
+
+    &__icon {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 5px;
+        fill: color($colors, selectedBar);
+    }
+
+    &__body {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__date {
+        align-self: flex-start;
+        margin-left: auto;
+    }
+
+    &__body,
+    &__date {
+        color: color($colors, shortDescription);
+        font-size: inherit;
+    }
+}

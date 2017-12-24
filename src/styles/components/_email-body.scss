@@ -1,0 +1,16 @@
+.email-body {
+    padding: 40px 50px;
+    box-shadow: 0 0 2px color($colors, border);
+    border-radius: 10px;
+    background-color: #fff;
+
+    &__title {
+        margin: 0;
+        font-size: fontSize($font-size, sender);
+        font-weight: $font-regular;
+    }
+
+    & > p {
+        font-size: fontSize($font-size, body);
+    }
+}

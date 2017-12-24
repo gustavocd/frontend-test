@@ -1,0 +1,31 @@
+.email-header {
+    width: 100%;
+    display: flex;
+    align-self: flex-start;
+    align-items: baseline;
+    margin-bottom: 20px;
+
+    &__title {
+        margin: 0;
+        font-size: fontSize($font-size, subject);
+    }
+
+    &__actions {
+        display: flex;
+        margin-left: auto;
+    }
+
+    &__icon {
+        width: 19px;
+        height: 19px;
+        fill: color($colors, border);
+
+        &:hover {
+            fill: color($colors, selectedBar);
+        }
+
+        &.active {
+            fill: color($colors, selectedBar);
+        }
+    }
+}

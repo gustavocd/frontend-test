@@ -1,7 +1,7 @@
 {
-  "name": "fronted-test",
+  "name": "frontend-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "node-sass-chokidar": "^0.0.3",
     "react": "^16.2.0",

@@ -1,0 +1,11 @@
+.email-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+
+    &__envelop {
+        fill: color($colors, border);
+        transform: scale(1.5);
+    }
+}

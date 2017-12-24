@@ -1,5 +1,15 @@
+@import "vendors/normalize";
+@import "abstracts/variables";
 @import "base/base";
 
-@import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
+
+@import "layout/email-client";
+@import "layout/email-container";
+@import "layout/email-list";
+
+@import "components/email-actions";
+@import "components/email-item";
+@import "components/email-header";
+@import "components/email-body";
