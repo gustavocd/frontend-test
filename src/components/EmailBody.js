@@ -30,7 +30,7 @@ class EmailBody extends Component {
 }
 
 const mapStateToProps = state => ({
-    email: state.emails[state.currentIndex]
+    email: state.inbox.currentEmail
 });
 
 export default connect(mapStateToProps)(EmailBody);

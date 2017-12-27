@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import EmailClient from './EmailClient';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './store/reducer';
+import reducers from './store';
 
-const store = createStore(reducer);
+const store = createStore(reducers);
 
 ReactDOM.render(
     <Provider store={store}>

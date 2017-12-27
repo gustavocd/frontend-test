@@ -72,5 +72,6 @@ export default {
             }]
         }
     ],
+    currentEmail: null,
     currentIndex: null
 };
