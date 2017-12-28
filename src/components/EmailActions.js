@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { SET_VISIBILITY_FILTER } from '../store/actions/actions';
 
 class EmailActions extends Component {
     render() {
@@ -40,9 +41,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onShowAll: () => dispatch({ type: 'SET_VISIBILITY_FILTER', filter: 'SHOW_ALL' }),
-    onShowDeleted: () => dispatch({ type: 'SET_VISIBILITY_FILTER', filter: 'SHOW_DELETED' }),
-    onShowSpam: () => dispatch({ type: 'SET_VISIBILITY_FILTER', filter: 'SHOW_SPAM' })
+    onShowAll: () => dispatch({ type: SET_VISIBILITY_FILTER, filter: 'SHOW_ALL' }),
+    onShowDeleted: () => dispatch({ type: SET_VISIBILITY_FILTER, filter: 'SHOW_DELETED' }),
+    onShowSpam: () => dispatch({ type: SET_VISIBILITY_FILTER, filter: 'SHOW_SPAM' })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmailActions);

@@ -29,14 +29,14 @@ export default {
             }]
         },
         {
-            from: "gustavo@mail.com",
+            from: "miguel@mail.com",
             to: "agavelab@mail.com",
             subject: "Hey, how are you?",
             body: "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
             date: "11/17/2016",
             isReaded: false,
-            avatar: "https://www.gravatar.com/avatar/599e62e7fa950901fd02acbf887ee342?s=25&d=mm",
-            tag: "Gustavo Castillo",
+            avatar: "https://robohash.org/dignissimosetsuscipit.jpg?size=50x50&set=set1",
+            tag: "Miguel Galván",
             attachements: [{
                 file: "http://dummyimage.com/250x250.jpg/dddddd/000000",
                 name: "sodales_scelerisque_mauris.jpeg"
@@ -57,6 +57,36 @@ export default {
             }]
         }
         ,
+        {
+            from: "isaiah.robertson48@example.com",
+            to: "agavelab@mail.com",
+            subject: "Backend Challenge",
+            body: "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+            date: "11/17/2016",
+            isReaded: false,
+            avatar: "https://randomuser.me/api/portraits/men/50.jpg",
+            tag: "Isaiah Robertson",
+            attachements: [{
+                file: "http://dummyimage.com/250x250.jpg/dddddd/000000",
+                name: "sodales_scelerisque_mauris.jpeg"
+            }]
+        }
+    ],
+    newEmails: [
+        {
+            from: "erik.gomez10@example.com",
+            to: "agavelab@mail.com",
+            subject: "Please give one more chance",
+            body: "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+            date: "11/17/2016",
+            isReaded: false,
+            avatar: "https://randomuser.me/api/portraits/men/13.jpg",
+            tag: "Erik Gomez",
+            attachements: [{
+                file: "http://dummyimage.com/250x250.jpg/dddddd/000000",
+                name: "sodales_scelerisque_mauris.jpeg"
+            }]
+        },
         {
             from: "isaiah.robertson48@example.com",
             to: "agavelab@mail.com",

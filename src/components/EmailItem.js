@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { format } from '../store/utility';
 
 class EmailItem extends Component {
     render() {
         const { index, email, currentIndex, click } = this.props;
         return (
             <div className={`email-item ${currentIndex === index ? 'active': ''}`} onClick={() => click(index, email)}>
-                <svg className="email-item__icon" style={{ 'display': email.isReaded ? 'none': 'block'}}>
+                <svg className="email-item__icon" style={{ 'display': email.isReaded ? 'none' : 'block' }}>
                     <use xlinkHref="img/sprite.svg#icon-circle"></use>
                 </svg>
                 <div className="email-item__header">
                     <img className="email-item__avatar" src={email.avatar} alt={email.tag} />
                     <h2 className="email-item__sender">{email.tag}</h2>
-                    <time className="email-item__date">{email.date}</time>
+                    <time className="email-item__date">{format(email.date)}</time>
                 </div>
                 <h3 className="email-item__subject">{email.subject}</h3>
                 <p className="email-item__body">{email.body}</p>
@@ -22,7 +23,8 @@ class EmailItem extends Component {
 }
 
 const mapStateToProps = state => ({
-    currentIndex: state.inbox.currentIndex
+    currentIndex: state.inbox.currentIndex,
+    currentEmail: state.inbox.currentEmail
 });
 
 export default connect(mapStateToProps)(EmailItem);

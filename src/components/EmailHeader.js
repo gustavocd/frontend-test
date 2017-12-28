@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actionTypes from '../store/actions/actions';
 
 class EmailHeader extends Component {
     render() {
@@ -41,9 +42,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onSetAsUnread: (index) => dispatch({ type: 'SET_AS_UNREAD', index }),
-    onSetAsDeleted: (index) => dispatch({ type: 'SET_AS_DELETED', index }),
-    onSetAsSpam: (index) => dispatch({ type: 'SET_AS_SPAM', index })
+    onSetAsUnread: (index) => dispatch({ type: actionTypes.SET_AS_UNREAD, index }),
+    onSetAsDeleted: (index) => dispatch({ type: actionTypes.SET_AS_DELETED, index }),
+    onSetAsSpam: (index) => dispatch({ type: actionTypes.SET_AS_SPAM, index })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmailHeader);
