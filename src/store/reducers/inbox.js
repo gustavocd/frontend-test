@@ -24,10 +24,10 @@ const inbox = (state = initialState, action) => {
         emails: updatedEmails
       });
     case actionTypes.EMAILS_RECIEVE:
-      const test = state.newEmails.map(email => {
+      const emailsWithId = state.newEmails.map(email => {
         return { ...email, id: uuid() };
       });
-      const recieveEmails = [...test, ...state.emails];
+      const recieveEmails = [...emailsWithId, ...state.emails];
       return updateObject(state, { emails: recieveEmails });
     default:
       return state;
