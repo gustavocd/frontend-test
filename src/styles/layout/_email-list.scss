@@ -3,6 +3,7 @@
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    animation: appear .4s ease-in-out;
 
     &::-webkit-scrollbar,
     &::-moz-scrollbar {

@@ -3,8 +3,8 @@ import visibilityFilter from './filter';
 import inbox from './inbox';
 
 const reducers = combineReducers({
-    inbox,
-    visibilityFilter
+  inbox,
+  visibilityFilter
 });
 
 export default reducers;

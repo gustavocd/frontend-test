@@ -12,7 +12,8 @@
     border-bottom: 1px solid color($colors, border);
     font-size: fontSize($font-size, text);
     transition: background-color .3s ease-in-out;
-
+    animation: appear .4s ease-in-out;
+    
     &:hover {
         cursor: pointer;
         background-color: color($colors, selectedBg);

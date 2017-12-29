@@ -3,6 +3,7 @@
     box-shadow: 0 0 2px color($colors, border);
     border-radius: 10px;
     background-color: #fff;
+    animation: appear .4s ease-in-out;
 
     &__title {
         margin: 0;
