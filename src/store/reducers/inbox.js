@@ -1,7 +1,7 @@
 import initialState from '../state';
 import { updateObject, tagEmail } from '../utility';
 import * as actionTypes from '../actions/actions';
-import uuid from 'uuid';
+import { v1 as uuid } from 'uuid';
 
 const inbox = (state = initialState, action) => {
   switch (action.type) {
